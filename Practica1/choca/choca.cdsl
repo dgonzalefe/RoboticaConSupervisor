@@ -1,0 +1,18 @@
+import "/robocomp/interfaces/IDSLs/Laser.idsl";
+import "/robocomp/interfaces/IDSLs/DifferentialRobot.idsl";
+import "/robocomp/interfaces/IDSLs/RCISMousePicker.idsl";
+import "/robocomp/interfaces/IDSLs/GotoPoint.idsl";
+
+
+Component choca
+{
+	Communications
+	{
+		implements GotoPoint;
+		requires Laser, DifferentialRobot;
+		subscribesTo RCISMousePicker;
+	};
+	language Cpp;
+	gui Qt(QWidget);
+};
+

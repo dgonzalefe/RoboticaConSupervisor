@@ -1,0 +1,21 @@
+CommonBehavior.Endpoints=tcp -p 12000
+
+
+# Proxies for required interfaces
+DifferentialRobotProxy = differentialrobot:tcp -h localhost -p 10004
+LaserProxy = laser:tcp -h localhost -p 10003
+RCISMousePickerTopic.Endpoints=tcp -p 15000
+TopicManager.Proxy=IceStorm/TopicManager:default -p 9999
+GotoPoint.Endpoints=tcp -p 10001
+
+
+
+
+
+Ice.Warn.Connections=0
+Ice.Trace.Network=0
+Ice.Trace.Protocol=0
+Ice.ACM.Client=10
+Ice.ACM.Server=10
+
+
